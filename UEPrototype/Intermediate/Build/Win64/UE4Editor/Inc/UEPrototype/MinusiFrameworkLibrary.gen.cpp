@@ -23,6 +23,8 @@ void EmptyLinkFunctionForGeneratedCodeMinusiFrameworkLibrary() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 	UEPROTOTYPE_API UFunction* Z_Construct_UFunction_UMinusiFrameworkLibrary_GetSpecificFirstActorWithTag();
+	UEPROTOTYPE_API UFunction* Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor();
+	ENGINE_API UClass* Z_Construct_UClass_APlayerController_NoRegister();
 	UEPROTOTYPE_API UFunction* Z_Construct_UFunction_UMinusiFrameworkLibrary_IsTypeofActor();
 	UEPROTOTYPE_API UFunction* Z_Construct_UFunction_UMinusiFrameworkLibrary_IsTypeofActor_Exec();
 	UEPROTOTYPE_API UFunction* Z_Construct_UFunction_UMinusiFrameworkLibrary_IsTypeofClass();
@@ -89,6 +91,7 @@ void EmptyLinkFunctionForGeneratedCodeMinusiFrameworkLibrary() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetSpecificAllActorWithTag", &UMinusiFrameworkLibrary::execGetSpecificAllActorWithTag },
 			{ "GetSpecificFirstActorWithTag", &UMinusiFrameworkLibrary::execGetSpecificFirstActorWithTag },
+			{ "GetUnderCursorActor", &UMinusiFrameworkLibrary::execGetUnderCursorActor },
 			{ "IsTypeofActor", &UMinusiFrameworkLibrary::execIsTypeofActor },
 			{ "IsTypeofActor_Exec", &UMinusiFrameworkLibrary::execIsTypeofActor_Exec },
 			{ "IsTypeofClass", &UMinusiFrameworkLibrary::execIsTypeofClass },
@@ -215,6 +218,43 @@ void EmptyLinkFunctionForGeneratedCodeMinusiFrameworkLibrary() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMinusiFrameworkLibrary_GetSpecificFirstActorWithTag_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics
+	{
+		struct MinusiFrameworkLibrary_eventGetUnderCursorActor_Parms
+		{
+			APlayerController* Controller;
+			AActor* ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Controller;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics::NewProp_ReturnValue = { UE4CodeGen_Private::EPropertyClass::Object, "ReturnValue", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000580, 1, nullptr, STRUCT_OFFSET(MinusiFrameworkLibrary_eventGetUnderCursorActor_Parms, ReturnValue), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics::NewProp_Controller = { UE4CodeGen_Private::EPropertyClass::Object, "Controller", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0010000000000080, 1, nullptr, STRUCT_OFFSET(MinusiFrameworkLibrary_eventGetUnderCursorActor_Parms, Controller), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics::NewProp_ReturnValue,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics::NewProp_Controller,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Minusi" },
+		{ "ModuleRelativePath", "Public/Utility/MinusiFrameworkLibrary.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMinusiFrameworkLibrary, "GetUnderCursorActor", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04022401, sizeof(MinusiFrameworkLibrary_eventGetUnderCursorActor_Parms), Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics::PropPointers), 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -794,6 +834,7 @@ void EmptyLinkFunctionForGeneratedCodeMinusiFrameworkLibrary() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_UMinusiFrameworkLibrary_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UMinusiFrameworkLibrary_GetSpecificAllActorWithTag, "GetSpecificAllActorWithTag" }, // 2845932865
 		{ &Z_Construct_UFunction_UMinusiFrameworkLibrary_GetSpecificFirstActorWithTag, "GetSpecificFirstActorWithTag" }, // 3739611449
+		{ &Z_Construct_UFunction_UMinusiFrameworkLibrary_GetUnderCursorActor, "GetUnderCursorActor" }, // 4266642962
 		{ &Z_Construct_UFunction_UMinusiFrameworkLibrary_IsTypeofActor, "IsTypeofActor" }, // 2100958895
 		{ &Z_Construct_UFunction_UMinusiFrameworkLibrary_IsTypeofActor_Exec, "IsTypeofActor_Exec" }, // 3477991090
 		{ &Z_Construct_UFunction_UMinusiFrameworkLibrary_IsTypeofClass, "IsTypeofClass" }, // 3221798006
@@ -835,7 +876,7 @@ void EmptyLinkFunctionForGeneratedCodeMinusiFrameworkLibrary() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMinusiFrameworkLibrary, 3351090775);
+	IMPLEMENT_CLASS(UMinusiFrameworkLibrary, 2930661965);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UMinusiFrameworkLibrary(Z_Construct_UClass_UMinusiFrameworkLibrary, &UMinusiFrameworkLibrary::StaticClass, TEXT("/Script/UEPrototype"), TEXT("UMinusiFrameworkLibrary"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UMinusiFrameworkLibrary);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

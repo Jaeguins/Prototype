@@ -7,13 +7,12 @@
 
 #include "Module/Edit/MeshFactory.h"
 #include "EditManager.generated.h"
-
 UCLASS()
 class UEPROTOTYPE_API AEditManager : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AEditManager();
 
@@ -21,11 +20,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-
-	
-
 private:
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Prototype|Edit", meta=(AllowPrivateAccess = "true"))
-	class AMeshFactory* MeshFactory;
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Prototype|Edit", meta = (AllowPrivateAccess = "true"))
+		class AMeshFactory* MeshFactory;
 };

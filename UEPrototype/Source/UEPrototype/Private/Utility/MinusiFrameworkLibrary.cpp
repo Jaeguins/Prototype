@@ -148,5 +148,19 @@ TArray<AActor*> UMinusiFrameworkLibrary::GetSpecificAllActorWithTag(const UObjec
 	return SpecificActors;
 }
 
+AActor* UMinusiFrameworkLibrary::GetUnderCursorActor(APlayerController* Controller)
+{
+	FHitResult Hit;
+	Controller->GetHitResultUnderCursor(ECC_WorldStatic, false, Hit);
+	if (Hit.bBlockingHit && Hit.Actor != NULL && Hit.GetActor() != Cast<AActor>(Controller->GetPawn()))
+	{
+		ScreenLog(FString::Printf(TEXT("Selected Actor %s."), *Hit.GetActor()->GetName()));
+		//ScreenLog(FString::Printf(TEXT("Name = %s"), Hit.Actor->GetFName(), *FString(__FUNCTION__)));
+
+		return Hit.GetActor();
+	}
+	return NULL;
+}
+
 
 

@@ -8,8 +8,9 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class UObject;
+class APlayerController;
 class AActor;
+class UObject;
 struct FColor;
 enum class EBoolean : uint8;
 #ifdef UEPROTOTYPE_MinusiFrameworkLibrary_generated_h
@@ -18,6 +19,15 @@ enum class EBoolean : uint8;
 #define UEPROTOTYPE_MinusiFrameworkLibrary_generated_h
 
 #define UEPrototype_Source_UEPrototype_Public_Utility_MinusiFrameworkLibrary_h_30_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetUnderCursorActor) \
+	{ \
+		P_GET_OBJECT(APlayerController,Z_Param_Controller); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(AActor**)Z_Param__Result=UMinusiFrameworkLibrary::GetUnderCursorActor(Z_Param_Controller); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGetSpecificAllActorWithTag) \
 	{ \
@@ -136,6 +146,15 @@ enum class EBoolean : uint8;
 
 
 #define UEPrototype_Source_UEPrototype_Public_Utility_MinusiFrameworkLibrary_h_30_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetUnderCursorActor) \
+	{ \
+		P_GET_OBJECT(APlayerController,Z_Param_Controller); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(AActor**)Z_Param__Result=UMinusiFrameworkLibrary::GetUnderCursorActor(Z_Param_Controller); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGetSpecificAllActorWithTag) \
 	{ \

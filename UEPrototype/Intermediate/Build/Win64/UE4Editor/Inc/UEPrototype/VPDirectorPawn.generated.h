@@ -187,7 +187,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AVPDirectorPawn); \
 	FORCEINLINE static uint32 __PPO__MCWidget() { return STRUCT_OFFSET(AVPDirectorPawn, MCWidget); } \
 	FORCEINLINE static uint32 __PPO__FloatingPawnMovement() { return STRUCT_OFFSET(AVPDirectorPawn, FloatingPawnMovement); } \
 	FORCEINLINE static uint32 __PPO__CurrentMoveType() { return STRUCT_OFFSET(AVPDirectorPawn, CurrentMoveType); } \
-	FORCEINLINE static uint32 __PPO__FixedAxis() { return STRUCT_OFFSET(AVPDirectorPawn, FixedAxis); }
+	FORCEINLINE static uint32 __PPO__FixedAxis() { return STRUCT_OFFSET(AVPDirectorPawn, FixedAxis); } \
+	FORCEINLINE static uint32 __PPO__InterpSpeed() { return STRUCT_OFFSET(AVPDirectorPawn, InterpSpeed); } \
+	FORCEINLINE static uint32 __PPO__RotateSpeed() { return STRUCT_OFFSET(AVPDirectorPawn, RotateSpeed); }
 
 
 #define UEPrototype_Source_UEPrototype_Public_Core_VPDirectorPawn_h_50_PROLOG

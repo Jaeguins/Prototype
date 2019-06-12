@@ -125,4 +125,12 @@ private:
 	
 	UPROPERTY()
 	FRotator FixedAxis;
+
+	// 편집 모드 - 대상 물체를 바라보는 회전각의 보간 속도
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
+	float InterpSpeed;
+
+	// 편집 모드 - 공전 속도
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
+	float RotateSpeed;
 };

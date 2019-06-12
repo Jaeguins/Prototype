@@ -2,13 +2,14 @@
 
 #include "Core/VPDirectorPawn.h"
 #include "UEPrototype.h"
+#include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
 AVPDirectorPawn::AVPDirectorPawn()
 {
 	VP_CTOR;
 
- 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	// RootCollision 초기화
@@ -22,7 +23,7 @@ AVPDirectorPawn::AVPDirectorPawn()
 	// VRCamera 초기화
 	VRCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("VRCamera"));
 	VRCamera->SetupAttachment(VRRootTransform);
-		
+
 	// MotionController 초기화
 	MotionController = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("MotionController"));
 	MotionController->SetupAttachment(VRRootTransform);
@@ -38,21 +39,23 @@ AVPDirectorPawn::AVPDirectorPawn()
 	// EMoveType 초기화
 	CurrentMoveType = EMoveType::MT_LOCALAXIS;
 	FixedAxis = FRotator(0, 0, 0);
+	InterpSpeed = 3.f;
+	RotateSpeed = 2.f;
 }
 
 // Called when the game starts or when spawned
 void AVPDirectorPawn::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 // Called every frame
 void AVPDirectorPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
-	
+
+
 }
 
 // Called to bind functionality to input
@@ -68,7 +71,7 @@ void AVPDirectorPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 
 void AVPDirectorPawn::MoveAround(EMoveType InMoveType, float InX, float InY, float InZ, AActor const * InOrbitTarget)
 {
-	
+
 	if (InMoveType == EMoveType::MT_LOCALAXIS)
 	{
 		MoveLocalAxis(InX, InY, InZ);
@@ -93,9 +96,9 @@ void AVPDirectorPawn::MoveAround(EMoveType InMoveType, float InX, float InY, flo
 
 void AVPDirectorPawn::MoveAbsoluteAxis(float InX, float InY, float InZ)
 {
-	AddMovementInput(FVector(1, 0, 0), InX);
-	AddMovementInput(FVector(0, 1, 0), InY);
-	AddMovementInput(FVector(0, 0, 1), InZ);
+	AddMovementInput(FVector::ForwardVector, InX);
+	AddMovementInput(FVector::RightVector, InY);
+	AddMovementInput(FVector::UpVector, InZ);
 
 	CurrentMoveType = EMoveType::MT_ABSOLUTEAXIS;
 }
@@ -138,11 +141,19 @@ void AVPDirectorPawn::MoveLocalAxis(float InX, float InY, float InZ)
 
 void AVPDirectorPawn::MoveOrbitAxis(float InX, float InY, float InZ, AActor const * InOrbitTarget)
 {
-	if (InOrbitTarget == nullptr)
+	// 두 키를 동시에 혹은 둘다 누르지 않으면 작동 x
+	if (InOrbitTarget == nullptr || InX != 0 || (InY == 0 && InZ == 0) || (InY != 0 && InZ != 0))
 	{
-		VP_LOG(Error, TEXT("공전할 대상이 유효하지 않습니다."));
+		//VP_LOG(Error, TEXT("공전할 대상이 유효하지 않습니다."));
 		return;
 	}
-
 	FVector TargetLocation = InOrbitTarget->GetActorLocation();
+	FVector ActorLocation = GetActorLocation();
+	if (InY != 0 && InZ == 0)
+		AddActorWorldOffset(ActorLocation.RotateAngleAxis(RotateSpeed, FVector::UpVector * -InY) - GetActorLocation());
+	else if (InZ != 0 && InY == 0)
+		AddActorWorldOffset(ActorLocation.RotateAngleAxis(RotateSpeed, GetControlRotation().Vector().RightVector.GetSafeNormal() * -InZ) - GetActorLocation());
+	else
+		return;
+	VRCamera->SetWorldRotation(UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), TargetLocation));
 }

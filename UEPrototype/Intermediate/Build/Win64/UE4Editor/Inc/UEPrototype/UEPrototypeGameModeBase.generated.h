@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UEPROTOTYPE_UEPrototypeGameModeBase_generated_h
 
-#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_RPC_WRAPPERS
-#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_INCLASS_NO_PURE_DECLS \
+#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_RPC_WRAPPERS
+#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAUEPrototypeGameModeBase(); \
 	friend struct Z_Construct_UClass_AUEPrototypeGameModeBase_Statics; \
@@ -24,7 +24,7 @@ public: \
 	DECLARE_SERIALIZER(AUEPrototypeGameModeBase)
 
 
-#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_INCLASS \
+#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_INCLASS \
 private: \
 	static void StaticRegisterNativesAUEPrototypeGameModeBase(); \
 	friend struct Z_Construct_UClass_AUEPrototypeGameModeBase_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(AUEPrototypeGameModeBase)
 
 
-#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_STANDARD_CONSTRUCTORS \
+#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AUEPrototypeGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AUEPrototypeGameModeBase) \
@@ -46,7 +46,7 @@ private: \
 public:
 
 
-#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
+#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AUEPrototypeGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -59,26 +59,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AUEPrototypeGameModeBase); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AUEPrototypeGameModeBase)
 
 
-#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET
-#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_12_PROLOG
-#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_GENERATED_BODY_LEGACY \
+#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_PRIVATE_PROPERTY_OFFSET
+#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_10_PROLOG
+#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_RPC_WRAPPERS \
-	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_INCLASS \
-	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_STANDARD_CONSTRUCTORS \
+	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_PRIVATE_PROPERTY_OFFSET \
+	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_RPC_WRAPPERS \
+	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_INCLASS \
+	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_GENERATED_BODY \
+#define UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_PRIVATE_PROPERTY_OFFSET \
-	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_INCLASS_NO_PURE_DECLS \
-	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_15_ENHANCED_CONSTRUCTORS \
+	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_PRIVATE_PROPERTY_OFFSET \
+	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_INCLASS_NO_PURE_DECLS \
+	UEPrototype_Source_UEPrototype_UEPrototypeGameModeBase_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

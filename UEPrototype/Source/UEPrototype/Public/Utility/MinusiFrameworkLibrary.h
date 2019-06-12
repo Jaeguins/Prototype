@@ -83,9 +83,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Minusi", meta=(WorldContext="WorldContextObject", Keywords = "GetTag", DeterminesOutputType = "ActorToFind"))
 	static TArray<AActor*> GetSpecificAllActorWithTag(const UObject* WorldContextObject, FName Tag, TSubclassOf<AActor> ActorToFind);
 
-
-
-
-
+	UFUNCTION(BlueprintCallable, Category = "Minusi")
+	static AActor* GetUnderCursorActor(APlayerController* Controller);
 	//
 };

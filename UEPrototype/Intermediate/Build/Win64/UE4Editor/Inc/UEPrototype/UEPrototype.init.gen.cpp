@@ -11,6 +11,7 @@
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeUEPrototype_init() {}
+	UEPROTOTYPE_API UFunction* Z_Construct_UDelegateFunction_UEPrototype_StateEventDispatcher__DelegateSignature();
 	UEPROTOTYPE_API UFunction* Z_Construct_UDelegateFunction_UEPrototype_InitEventDispatcher__DelegateSignature();
 	UEPROTOTYPE_API UFunction* Z_Construct_UDelegateFunction_UEPrototype_ReferenceDelegate__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_UEPrototype()
@@ -19,14 +20,15 @@ void EmptyLinkFunctionForGeneratedCodeUEPrototype_init() {}
 		if (!ReturnPackage)
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_UEPrototype_StateEventDispatcher__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_UEPrototype_InitEventDispatcher__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_UEPrototype_ReferenceDelegate__DelegateSignature,
 			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/UEPrototype",
 				PKG_CompiledIn | 0x00000000,
-				0x6C504994,
-				0xCE0BF147,
+				0xA5DCF763,
+				0x648D415F,
 				SingletonFuncArray, ARRAY_COUNT(SingletonFuncArray),
 				METADATA_PARAMS(nullptr, 0)
 			};

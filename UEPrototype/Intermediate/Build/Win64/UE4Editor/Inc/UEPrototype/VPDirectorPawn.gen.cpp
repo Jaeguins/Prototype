@@ -352,6 +352,14 @@ void EmptyLinkFunctionForGeneratedCodeVPDirectorPawn() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RotateSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RotateSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InterpSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_InterpSpeed;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FixedAxis_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_FixedAxis;
@@ -407,6 +415,24 @@ void EmptyLinkFunctionForGeneratedCodeVPDirectorPawn() {}
 		{ "ToolTip", "*     DirectorPawn\xec\x9d\x80 \xed\x94\x84\xeb\xa1\x9c\xed\x86\xa0\xed\x83\x80\xec\x9e\x85 \xec\x9b\x94\xeb\x93\x9c\xec\x97\x90\xec\x84\x9c \xed\x94\x84\xeb\xa1\x9c\xed\x86\xa0\xed\x83\x80\xec\x9e\x85\xec\x9d\x84 \xeb\x8b\xb4\xeb\x8b\xb9\xed\x95\x98\xeb\x8a\x94 \xed\x94\x8c\xeb\xa0\x88\xec\x9d\xb4\xec\x96\xb4\xea\xb0\x80\n*     \xea\xb8\xb0\xeb\xb3\xb8\xec\xa0\x81\xec\x9c\xbc\xeb\xa1\x9c \xeb\xb9\x99\xec\x9d\x98\xed\x95\x98\xeb\x8a\x94 \xed\x8f\xb0\xec\x9e\x85\xeb\x8b\x88\xeb\x8b\xa4. VR \xea\xb8\xb0\xea\xb8\xb0\xec\x99\x80 \xec\xbb\xa8\xed\x8a\xb8\xeb\xa1\xa4\xeb\x9f\xac\xeb\xa5\xbc \xec\x82\xac\xec\x9a\xa9\xed\x95\x98\xeb\x8a\x94 \xec\x9c\xa0\xec\xa0\x80\xec\x9d\x98\n*     \xeb\xaa\xa8\xec\x8a\xb5\xec\x9d\x84 \xea\xb5\xac\xed\x98\x84\xed\x95\xa9\xeb\x8b\x88\xeb\x8b\xa4." },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_RotateSpeed_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Public/Core/VPDirectorPawn.h" },
+		{ "ToolTip", "\xed\x8e\xb8\xec\xa7\x91 \xeb\xaa\xa8\xeb\x93\x9c - \xea\xb3\xb5\xec\xa0\x84 \xec\x86\x8d\xeb\x8f\x84" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_RotateSpeed = { UE4CodeGen_Private::EPropertyClass::Float, "RotateSpeed", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000000015, 1, nullptr, STRUCT_OFFSET(AVPDirectorPawn, RotateSpeed), METADATA_PARAMS(Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_RotateSpeed_MetaData, ARRAY_COUNT(Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_RotateSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_InterpSpeed_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Public/Core/VPDirectorPawn.h" },
+		{ "ToolTip", "\xed\x8e\xb8\xec\xa7\x91 \xeb\xaa\xa8\xeb\x93\x9c - \xeb\x8c\x80\xec\x83\x81 \xeb\xac\xbc\xec\xb2\xb4\xeb\xa5\xbc \xeb\xb0\x94\xeb\x9d\xbc\xeb\xb3\xb4\xeb\x8a\x94 \xed\x9a\x8c\xec\xa0\x84\xea\xb0\x81\xec\x9d\x98 \xeb\xb3\xb4\xea\xb0\x84 \xec\x86\x8d\xeb\x8f\x84" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_InterpSpeed = { UE4CodeGen_Private::EPropertyClass::Float, "InterpSpeed", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0040000000000015, 1, nullptr, STRUCT_OFFSET(AVPDirectorPawn, InterpSpeed), METADATA_PARAMS(Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_InterpSpeed_MetaData, ARRAY_COUNT(Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_InterpSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_FixedAxis_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Core/VPDirectorPawn.h" },
@@ -485,6 +511,8 @@ void EmptyLinkFunctionForGeneratedCodeVPDirectorPawn() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_RootCollision = { UE4CodeGen_Private::EPropertyClass::Object, "RootCollision", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x00400000000a000d, 1, nullptr, STRUCT_OFFSET(AVPDirectorPawn, RootCollision), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_RootCollision_MetaData, ARRAY_COUNT(Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_RootCollision_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AVPDirectorPawn_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_RotateSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_InterpSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_FixedAxis,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_CurrentMoveType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AVPDirectorPawn_Statics::NewProp_CurrentMoveType_Underlying,
@@ -518,7 +546,7 @@ void EmptyLinkFunctionForGeneratedCodeVPDirectorPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AVPDirectorPawn, 534804095);
+	IMPLEMENT_CLASS(AVPDirectorPawn, 183745428);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AVPDirectorPawn(Z_Construct_UClass_AVPDirectorPawn, &AVPDirectorPawn::StaticClass, TEXT("/Script/UEPrototype"), TEXT("AVPDirectorPawn"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AVPDirectorPawn);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
